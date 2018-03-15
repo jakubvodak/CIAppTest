@@ -27,6 +27,21 @@ class CIAppTestUITests: XCTestCase {
         // Put teardown code here. This method is called after the invocation of each test method in the class.
         super.tearDown()
     }
+
+    func testRoverRotateToRightGoesTo() {
+
+        let app = XCUIApplication()
+        let textField = app.textFields["textFieldIdentifier"]
+        textField.tap()
+        textField.typeText("R\n")
+
+        let button = app.buttons["actionButtonIdentifier"]
+        button.tap()
+
+        let description = app.staticTexts["labelIdentifier"]
+
+        XCTAssertEqual(description.label, "X: 0, Y: 0, Direction: E")
+    }
     
     func testExample() {
         // Use recording to get started writing UI tests.

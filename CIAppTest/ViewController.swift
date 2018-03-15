@@ -8,18 +8,44 @@
 
 import UIKit
 
-class ViewController: UIViewController {
+class ViewController: UIViewController, UITextFieldDelegate {
+
+    @IBOutlet weak var textField: UITextField!
+    @IBOutlet weak var actionButton: UIButton!
+    @IBOutlet weak var label: UILabel!
+
+    var rover: Rover!
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+
+        label.text = String()
+
+        rover = Rover(x: 0, y: 0, direction: "N")
+
+        configureView()
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    @IBAction func buttonAction() {
+
+        rover.execute(string: textField.text ?? String())
+
+        textField.text = String()
+
+        configureView()
     }
 
+    func configureView() {
 
+        label.text = rover.description
+    }
+
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+
+        textField.resignFirstResponder()
+
+        buttonAction()
+
+        return true
+    }
 }
-

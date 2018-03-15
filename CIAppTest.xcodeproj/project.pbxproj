@@ -12,8 +12,12 @@
 		CB279CA0205AA39000E52816 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB279C9E205AA39000E52816 /* Main.storyboard */; };
 		CB279CA2205AA39000E52816 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = CB279CA1205AA39000E52816 /* Assets.xcassets */; };
 		CB279CA5205AA39000E52816 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = CB279CA3205AA39000E52816 /* LaunchScreen.storyboard */; };
-		CB279CB0205AA39100E52816 /* CIAppTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB279CAF205AA39100E52816 /* CIAppTestTests.swift */; };
 		CB279CBB205AA39100E52816 /* CIAppTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB279CBA205AA39100E52816 /* CIAppTestUITests.swift */; };
+		CB279CCA205AA54C00E52816 /* Rover.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB279CC9205AA54C00E52816 /* Rover.swift */; };
+		CB279CCD205AAAFB00E52816 /* RoverTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB279CCC205AAAFB00E52816 /* RoverTests.swift */; };
+		CB279CCF205AABCA00E52816 /* Rover.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB279CC9205AA54C00E52816 /* Rover.swift */; };
+		CB279CD0205AC5E300E52816 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB279C9C205AA39000E52816 /* ViewController.swift */; };
+		CB279CD1205AC79400E52816 /* Rover.swift in Sources */ = {isa = PBXBuildFile; fileRef = CB279CC9205AA54C00E52816 /* Rover.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -42,11 +46,13 @@
 		CB279CA4205AA39000E52816 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		CB279CA6205AA39000E52816 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB279CAB205AA39000E52816 /* CIAppTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CIAppTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
-		CB279CAF205AA39100E52816 /* CIAppTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CIAppTestTests.swift; sourceTree = "<group>"; };
 		CB279CB1205AA39100E52816 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		CB279CB6205AA39100E52816 /* CIAppTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = CIAppTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB279CBA205AA39100E52816 /* CIAppTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CIAppTestUITests.swift; sourceTree = "<group>"; };
 		CB279CBC205AA39100E52816 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		CB279CC9205AA54C00E52816 /* Rover.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Rover.swift; sourceTree = "<group>"; };
+		CB279CCB205AAAFB00E52816 /* CIAppTestTests-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "CIAppTestTests-Bridging-Header.h"; sourceTree = "<group>"; };
+		CB279CCC205AAAFB00E52816 /* RoverTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoverTests.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,6 +103,7 @@
 		CB279C99205AA39000E52816 /* CIAppTest */ = {
 			isa = PBXGroup;
 			children = (
+				CB279CC8205AA51F00E52816 /* Model */,
 				CB279C9A205AA39000E52816 /* AppDelegate.swift */,
 				CB279C9C205AA39000E52816 /* ViewController.swift */,
 				CB279C9E205AA39000E52816 /* Main.storyboard */,
@@ -110,8 +117,9 @@
 		CB279CAE205AA39000E52816 /* CIAppTestTests */ = {
 			isa = PBXGroup;
 			children = (
-				CB279CAF205AA39100E52816 /* CIAppTestTests.swift */,
 				CB279CB1205AA39100E52816 /* Info.plist */,
+				CB279CCC205AAAFB00E52816 /* RoverTests.swift */,
+				CB279CCB205AAAFB00E52816 /* CIAppTestTests-Bridging-Header.h */,
 			);
 			path = CIAppTestTests;
 			sourceTree = "<group>";
@@ -123,6 +131,14 @@
 				CB279CBC205AA39100E52816 /* Info.plist */,
 			);
 			path = CIAppTestUITests;
+			sourceTree = "<group>";
+		};
+		CB279CC8205AA51F00E52816 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				CB279CC9205AA54C00E52816 /* Rover.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -197,6 +213,7 @@
 					};
 					CB279CAA205AA39000E52816 = {
 						CreatedOnToolsVersion = 9.2;
+						LastSwiftMigration = 0920;
 						ProvisioningStyle = Automatic;
 						TestTargetID = CB279C96205AA39000E52816;
 					};
@@ -261,6 +278,7 @@
 			files = (
 				CB279C9D205AA39000E52816 /* ViewController.swift in Sources */,
 				CB279C9B205AA39000E52816 /* AppDelegate.swift in Sources */,
+				CB279CCA205AA54C00E52816 /* Rover.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -268,7 +286,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				CB279CB0205AA39100E52816 /* CIAppTestTests.swift in Sources */,
+				CB279CCF205AABCA00E52816 /* Rover.swift in Sources */,
+				CB279CCD205AAAFB00E52816 /* RoverTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -276,7 +295,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CB279CD0205AC5E300E52816 /* ViewController.swift in Sources */,
 				CB279CBB205AA39100E52816 /* CIAppTestUITests.swift in Sources */,
+				CB279CD1205AC79400E52816 /* Rover.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -457,12 +478,15 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XWQ4Y8CJ93;
 				INFOPLIST_FILE = CIAppTestTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = strv.CIAppTestTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CIAppTestTests/CIAppTestTests-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CIAppTest.app/CIAppTest";
@@ -474,12 +498,14 @@
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = XWQ4Y8CJ93;
 				INFOPLIST_FILE = CIAppTestTests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = strv.CIAppTestTests;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "CIAppTestTests/CIAppTestTests-Bridging-Header.h";
 				SWIFT_VERSION = 4.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/CIAppTest.app/CIAppTest";
